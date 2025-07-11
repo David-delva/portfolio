@@ -8,7 +8,7 @@ import { ExternalLink, Github, Code, Database, Smartphone, Globe } from 'lucide-
 
 export default function Projects() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   const projects = [
     {

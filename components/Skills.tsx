@@ -7,7 +7,7 @@ import { Code, Database, Globe, Smartphone, Server, Shield } from 'lucide-react'
 
 export default function Skills() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   const skillCategories = [
     {

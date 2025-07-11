@@ -1,0 +1,1 @@
+\"Fix: Correct useInView type errors and configure GitHub Pages deployment\" 
