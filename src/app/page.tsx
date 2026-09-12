@@ -70,63 +70,135 @@ export default function Home() {
     { id: "about", label: "À propos" },
     { id: "skills", label: "Compétences" },
     { id: "projects", label: "Projets" },
+    { id: "certifications", label: "Certifications" },
     { id: "contact", label: "Contact" },
   ];
 
   const skills = [
-    { name: "React/Next.js", level: 95, icon: Globe },
-    { name: "TypeScript", level: 90, icon: Code2 },
-    { name: "Node.js", level: 85, icon: Database },
-    { name: "Python", level: 80, icon: Code2 },
-    { name: "PostgreSQL", level: 75, icon: Database },
-    { name: "Docker", level: 70, icon: Globe },
+    { name: "HTML/CSS", level: 95, category: "Langages" },
+    { name: "JavaScript", level: 90, category: "Langages" },
+    { name: "PHP", level: 85, category: "Langages" },
+    { name: "Python", level: 80, category: "Langages" },
+    { name: "React", level: 88, category: "Développement Web" },
+    { name: "Laravel", level: 82, category: "Développement Web" },
+    { name: "Angular", level: 75, category: "Développement Web" },
+    { name: "Node.js", level: 78, category: "Développement Web" },
+    { name: "MySQL", level: 85, category: "Bases de données" },
+    { name: "MongoDB", level: 80, category: "Bases de données" },
+    { name: "Firebase", level: 75, category: "Bases de données" },
+    { name: "Git/GitHub", level: 90, category: "Outils" },
+    { name: "Docker", level: 70, category: "Outils" },
+    { name: "VS Code", level: 95, category: "Outils" },
+    { name: "Cisco Packet Tracer", level: 75, category: "Réseaux" },
+    { name: "Linux", level: 80, category: "Systèmes" },
+  ];
+
+  const certifications = [
+    {
+      title: "Introduction à la cybersécurité",
+      issuer: "Cisco Netacad",
+      year: "2024",
+      description: "Fondamentaux de la sécurité informatique et des bonnes pratiques.",
+    },
+    {
+      title: "Introduction à l'IoT",
+      issuer: "Cisco Netacad",
+      year: "2024",
+      description: "Concepts de base de l'Internet des Objets et applications.",
+    },
+    {
+      title: "Introduction to Modern AI",
+      issuer: "Online Certification",
+      year: "2025",
+      description: "Initiation à l'intelligence artificielle et au machine learning.",
+    },
+    {
+      title: "Networking Basics",
+      issuer: "Cisco Netacad",
+      year: "2025",
+      description: "Fondamentaux des réseaux informatiques et protocoles.",
+    },
   ];
 
   const projects = [
     {
-      title: "Plateforme E-commerce",
-      description: "Application complète de commerce électronique avec paiement sécurisé, gestion de stock et tableau de bord admin.",
-      tech: ["Next.js", "Stripe", "PostgreSQL", "TailwindCSS"],
+      title: "VACIEVENT",
+      description: "Application web de location de matériel événementiel (tentes, chaises, tables). Gestion complète des réservations et du catalogue.",
+      tech: ["PHP", "JavaScript", "Bootstrap", "MySQL"],
       image: "/project1.jpg",
       link: "#",
       github: "#",
     },
     {
-      title: "Dashboard Analytics",
-      description: "Tableau de bord interactif pour visualisation de données en temps réel avec graphiques dynamiques.",
-      tech: ["React", "D3.js", "Node.js", "WebSocket"],
+      title: "Gestion de bouteilles de gaz",
+      description: "Frontend mobile pour le suivi du stock et des livraisons de bouteilles de gaz en temps réel.",
+      tech: ["React Native", "Expo", "MongoDB"],
       image: "/project2.jpg",
       link: "#",
       github: "#",
     },
     {
-      title: "Application Mobile Santé",
-      description: "App de suivi de santé avec synchronisation cloud, rappels de médicaments et conseils personnalisés.",
-      tech: ["React Native", "Firebase", "TypeScript", "Redux"],
+      title: "RAMSEY",
+      description: "Plateforme de vente et location de voitures en temps réel avec interface utilisateur moderne.",
+      tech: ["React 18", "TypeScript", "Node.js", "Express"],
       image: "/project3.jpg",
+      link: "#",
+      github: "#",
+    },
+    {
+      title: "Gestion des étudiants",
+      description: "Système de gestion des notes, absences et profils utilisateurs avec architecture MVC.",
+      tech: ["PHP Natif", "MySQL", "JavaScript"],
+      image: "/project4.jpg",
+      link: "#",
+      github: "#",
+    },
+    {
+      title: "Boutique en ligne",
+      description: "Plateforme e-commerce complète, du catalogue produits au paiement sécurisé.",
+      tech: ["PHP Natif", "JavaScript", "Bootstrap", "MySQL"],
+      image: "/project5.jpg",
+      link: "#",
+      github: "#",
+    },
+    {
+      title: "Maison connectée",
+      description: "Simulation domotique IoT avec contrôle des appareils connectés et automatisation.",
+      tech: ["Cisco Packet Tracer", "IoT"],
+      image: "/project6.jpg",
+      link: "#",
+      github: "#",
+    },
+    {
+      title: "Site vitrine Université",
+      description: "Présentation globale d'une école supérieure de médecine avec design moderne.",
+      tech: ["Next.js", "TypeScript", "TailwindCSS"],
+      image: "/project7.jpg",
       link: "#",
       github: "#",
     },
   ];
 
-  const experience = [
+  const education = [
     {
-      role: "Développeur Full Stack Senior",
-      company: "Tech Innovators",
-      period: "2022 - Présent",
-      description: "Leadership technique sur des projets critiques, mentorat d'équipe et architecture de solutions scalables.",
+      degree: "Licence professionnelle (En cours)",
+      school: "Institut National de la Poste, des Technologies de l'Information et de la Communication",
+      period: "En cours",
     },
     {
-      role: "Développeur Full Stack",
-      company: "Digital Solutions",
-      period: "2020 - 2022",
-      description: "Développement d'applications web modernes, intégration d'APIs et optimisation des performances.",
+      degree: "Diplôme de Technicien Supérieur (DTS)",
+      school: "Institut National de la Poste, des Technologies de l'Information et de la Communication",
+      period: "2024 - 2025",
     },
     {
-      role: "Développeur Frontend",
-      company: "StartUp Creative",
-      period: "2018 - 2020",
-      description: "Création d'interfaces utilisateur réactives et collaboratif avec les équipes design.",
+      degree: "Baccalauréat, série C",
+      school: "L.A.C Jeremie Bakoukou-Ba-Mouidy",
+      period: "2022 - 2023",
+    },
+    {
+      degree: "Brevet d'Études du Premier Cycle (BEPC)",
+      school: "CES d'Owendo",
+      period: "2019 - 2020",
     },
   ];
 
@@ -211,16 +283,22 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <div className="mb-4">
+                <h1 className="text-5xl md:text-7xl font-bold mb-2">
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    Goma MBA Delva David
+                  </span>
+                </h1>
+                <p className="text-2xl md:text-3xl text-slate-600 dark:text-slate-400">
                   Développeur Full Stack
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
-                Je transforme vos idées en applications web exceptionnelles, performantes et évolutives.
-                Spécialisé dans les technologies modernes et l'expérience utilisateur.
+                </p>
+              </div>
+              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto px-4">
+                Étudiant passionné par le développement logiciel et les systèmes réseaux, avec un vif intérêt 
+                pour la cybersécurité, le Big Data et l'intelligence artificielle. Curieux et motivé, je souhaite 
+                mettre mes compétences au service de projets innovants au sein d'une équipe dynamique.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.a
                   href="#projects"
                   whileHover={{ scale: 1.05 }}
@@ -236,6 +314,36 @@ export default function Home() {
                   className="px-8 py-4 border-2 border-slate-300 dark:border-slate-700 rounded-full font-semibold hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
                 >
                   Me contacter
+                </motion.a>
+              </div>
+              <div className="flex gap-4 justify-center items-center">
+                <motion.a
+                  href="mailto:gomambadelvadavid@gmail.com"
+                  whileHover={{ scale: 1.1 }}
+                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  title="Email"
+                >
+                  <Mail size={24} />
+                </motion.a>
+                <motion.a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  title="GitHub"
+                >
+                  <Github size={24} />
+                </motion.a>
+                <motion.a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  title="LinkedIn"
+                >
+                  <Linkedin size={24} />
                 </motion.a>
               </div>
             </motion.div>
@@ -273,41 +381,31 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                Passionné par le développement web depuis plus de 5 ans, je me spécialise dans la création 
-                d'applications modernes et performantes. Mon approche combine expertise technique et sens 
-                du design pour offrir des expériences utilisateur exceptionnelles.
+                Étudiant passionné par le développement logiciel et les systèmes réseaux, avec un vif intérêt 
+                pour la cybersécurité, le Big Data et l'intelligence artificielle. Basé à Libreville, Gabon, 
+                je suis curieux et motivé à mettre mes compétences au service de projets innovants.
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                 Toujours à l'affût des nouvelles technologies, je m'efforce d'apprendre et de m'améliorer 
                 continuellement. Je crois fermement que le code de qualité et l'architecture solide sont 
                 les fondations de tout projet réussi.
               </p>
-              <div className="flex gap-4 pt-4">
-                <motion.a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                >
-                  <Github size={24} />
-                </motion.a>
-                <motion.a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                >
-                  <Linkedin size={24} />
-                </motion.a>
-                <motion.a
-                  href="mailto:contact@example.com"
-                  whileHover={{ scale: 1.1 }}
-                  className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                >
-                  <Mail size={24} />
-                </motion.a>
+              <div className="pt-4">
+                <h4 className="text-lg font-semibold mb-3">Coordonnées</h4>
+                <ul className="space-y-2 text-slate-600 dark:text-slate-300">
+                  <li className="flex items-center gap-2">
+                    <Mail size={18} className="text-blue-600" />
+                    <span>gomambadelvadavid@gmail.com</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Globe size={18} className="text-blue-600" />
+                    <span>Libreville, Gabon</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Code2 size={18} className="text-blue-600" />
+                    <span>+241 66 29 00 52</span>
+                  </li>
+                </ul>
               </div>
             </motion.div>
             
@@ -317,8 +415,8 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h3 className="text-2xl font-semibold mb-6">Expérience Professionnelle</h3>
-              {experience.map((exp, index) => (
+              <h3 className="text-2xl font-semibold mb-6">Formation</h3>
+              {education.map((edu, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -327,10 +425,9 @@ export default function Home() {
                   transition={{ delay: index * 0.1 }}
                   className="border-l-4 border-blue-600 pl-6 pb-6 last:pb-0"
                 >
-                  <h4 className="text-xl font-semibold">{exp.role}</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-2">{exp.period}</p>
-                  <p className="text-slate-600 dark:text-slate-300">{exp.description}</p>
+                  <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">{edu.period}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -351,34 +448,37 @@ export default function Home() {
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                    <skill.icon className="text-blue-600 dark:text-blue-400" size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                    <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
-                      />
-                    </div>
-                  </div>
+          <div className="space-y-12">
+            {['Langages', 'Développement Web', 'Bases de données', 'Outils', 'Réseaux', 'Systèmes'].map((category) => (
+              <div key={category}>
+                <h3 className="text-2xl font-semibold mb-6 text-slate-700 dark:text-slate-300">{category}</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {skills.filter(s => s.category === category).map((skill, index) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-lg font-semibold">{skill.name}</h4>
+                        <span className="text-blue-600 dark:text-blue-400 font-medium">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.3 }}
+                          className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -441,6 +541,46 @@ export default function Home() {
                       <Github size={16} />
                       Code
                     </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 bg-slate-50 dark:bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4">Certifications</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                    <Code2 className="text-blue-600 dark:text-blue-400" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2">{cert.title}</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-medium mb-1">{cert.issuer}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-3">{cert.year}</p>
+                    <p className="text-slate-600 dark:text-slate-300">{cert.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -539,7 +679,7 @@ export default function Home() {
                   <span>LinkedIn</span>
                 </motion.a>
                 <motion.a
-                  href="mailto:contact@example.com"
+                  href="mailto:gomambadelvadavid@gmail.com"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
@@ -555,8 +695,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-slate-600 dark:text-slate-400">
-            © {new Date().getFullYear()} Portfolio. Développé avec passion using Next.js & TailwindCSS.
+          <p className="text-slate-600 dark:text-slate-400 mb-2">
+            © {new Date().getFullYear()} Goma MBA Delva David. Tous droits réservés.
+          </p>
+          <p className="text-slate-500 dark:text-slate-500 text-sm">
+            Développé avec passion en utilisant Next.js & TailwindCSS.
           </p>
         </div>
       </footer>
