@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { ExternalLink, Code2, Database, Globe, ChevronDown, X as XIcon, Menu as MenuIcon } from "lucide-react";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 // Custom icons for social media (SVG components)
 const Github = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -203,7 +204,10 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 relative overflow-hidden">
+      {/* 3D Animated Background */}
+      <AnimatedBackground />
+      
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 z-50 origin-left"
