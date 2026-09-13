@@ -8,6 +8,12 @@ import Particles3D from "@/components/Particles3D";
 import TechIcons3D from "@/components/TechIcons3D";
 import CertificationBadges3D from "@/components/CertificationBadges3D";
 import EducationTimeline3D from "@/components/EducationTimeline3D";
+import HeroSection3D from "@/components/HeroSection3D";
+import AboutSection3D from "@/components/AboutSection3D";
+import SkillsSection3D from "@/components/SkillsSection3D";
+import ProjectsSection3D from "@/components/ProjectsSection3D";
+import CertificationsSection3D from "@/components/CertificationsSection3D";
+import ContactSection3D from "@/components/ContactSection3D";
 
 // Custom icons for social media (SVG components)
 const Github = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -285,6 +291,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        {/* 3D Hero Background */}
+        <HeroSection3D />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
@@ -371,8 +379,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden">
+        {/* 3D About Background */}
+        <AboutSection3D />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -449,8 +459,10 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-20 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        {/* 3D Skills Background */}
+        <SkillsSection3D />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -498,8 +510,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="projects" className="py-20 bg-white dark:bg-slate-900 relative overflow-hidden">
+        {/* 3D Projects Background */}
+        <ProjectsSection3D />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -563,10 +577,9 @@ export default function Home() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-slate-50 dark:bg-slate-950 relative">
-        <div className="absolute inset-0 z-0 opacity-30">
-          <CertificationBadges3D />
-        </div>
+      <section id="certifications" className="py-20 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        {/* 3D Certifications Background */}
+        <CertificationsSection3D />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -606,8 +619,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        {/* 3D Contact Background */}
+        <ContactSection3D />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
