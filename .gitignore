@@ -17,13 +17,16 @@ out/
 .env.local
 *.env.*
 
-# Editors
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Python
+# Logs
+*.log
+
+# Python cache (if any Python files present)
 __pycache__/
 *.pyc
 *.pyo
@@ -40,10 +43,9 @@ pip-selfcheck.json
 htmlcov/
 .coverage.*
 
-# Node.js
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Temporary files
+*.tmp
+*.temp
 
 # OS generated files
 .DS_Store
