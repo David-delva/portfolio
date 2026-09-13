@@ -4,10 +4,6 @@ import { useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { ExternalLink, Code2, Database, Globe, ChevronDown, X as XIcon, Menu as MenuIcon } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import Particles3D from "@/components/Particles3D";
-import TechIcons3D from "@/components/TechIcons3D";
-import CertificationBadges3D from "@/components/CertificationBadges3D";
-import EducationTimeline3D from "@/components/EducationTimeline3D";
 
 // Custom icons for social media (SVG components)
 const Github = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -211,8 +207,6 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 relative overflow-hidden">
       {/* 3D Animated Background */}
       <AnimatedBackground />
-      <Particles3D />
-      <TechIcons3D />
       
       {/* Progress Bar */}
       <motion.div
