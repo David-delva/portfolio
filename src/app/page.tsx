@@ -217,8 +217,6 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 relative overflow-hidden">
       {/* 3D Animated Background */}
       <AnimatedBackground />
-      <Particles3D />
-      <TechIcons3D />
       
       {/* Progress Bar */}
       <motion.div
