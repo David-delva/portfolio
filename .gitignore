@@ -31,11 +31,17 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Coverage reports
-coverage/
-htmlcov/
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-selfcheck.json
+.pytest_cache/
+.mypy_cache/
 .coverage
+htmlcov/
+.coverage.*
 
 # Temporary files
 *.tmp
