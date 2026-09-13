@@ -4,6 +4,10 @@ import { useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { ExternalLink, Code2, Database, Globe, ChevronDown, X as XIcon, Menu as MenuIcon } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import Particles3D from "@/components/Particles3D";
+import TechIcons3D from "@/components/TechIcons3D";
+import CertificationBadges3D from "@/components/CertificationBadges3D";
+import EducationTimeline3D from "@/components/EducationTimeline3D";
 
 // Custom icons for social media (SVG components)
 const Github = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -207,6 +211,8 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 relative overflow-hidden">
       {/* 3D Animated Background */}
       <AnimatedBackground />
+      <Particles3D />
+      <TechIcons3D />
       
       {/* Progress Bar */}
       <motion.div
@@ -417,9 +423,12 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-6 relative"
             >
-              <h3 className="text-2xl font-semibold mb-6">Formation</h3>
+              <div className="absolute -top-20 -right-20 w-64 h-64 z-0 opacity-50">
+                <EducationTimeline3D />
+              </div>
+              <h3 className="text-2xl font-semibold mb-6 relative z-10">Formation</h3>
               {education.map((edu, index) => (
                 <motion.div
                   key={index}
@@ -427,7 +436,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="border-l-4 border-blue-600 pl-6 pb-6 last:pb-0"
+                  className="border-l-4 border-blue-600 pl-6 pb-6 last:pb-0 relative z-10"
                 >
                   <h4 className="text-xl font-semibold">{edu.degree}</h4>
                   <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
@@ -554,8 +563,11 @@ export default function Home() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="certifications" className="py-20 bg-slate-50 dark:bg-slate-950 relative">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <CertificationBadges3D />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -574,7 +586,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
